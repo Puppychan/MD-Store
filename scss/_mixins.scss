@@ -1,0 +1,13 @@
+// flex
+@mixin flex($gap: 0) {
+    display: flex;
+    gap: $gap;
+    align-items: center;
+}
+
+// responsive min
+@mixin media-min($min-width) {
+    @media screen and (min-width: $min-width){
+        @content;
+    }
+}

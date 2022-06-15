@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body-header {
+  height: 4em;
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.body-header-logo {
+  height: 100%;
+}
+.body-header-nav {
+  flex-grow: 1;
+  display: flex;
+}
+.body-header-nav-element:last-of-type {
+  background-color: red;
+}
+.body-header-nav-login {
+  height: 100%;
+  justify-self: flex-end;
+}
+
+/*# sourceMappingURL=main.css.map */

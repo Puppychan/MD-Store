@@ -1,0 +1,39 @@
+@use "mixins.scss" as mi;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body {
+    &-header {
+        height: 4em;
+        width: 100%;
+        @include mi.flex(1em);
+        &-logo {
+            height: 100%;
+        }
+        &-nav {
+            flex-grow: 1;
+            display: flex;
+            &-element:last-of-type {
+                background-color: red;
+            }
+            &-login {
+                height: 100%;
+                justify-self: flex-end;
+            }
+        }
+        &-download {
+        }
+    }
+}
+
+// tablet
+@include mi.media-min(768px) {
+    
+}
+
+// laptop
+@include mi.media-min(1440px) {
+
+}
