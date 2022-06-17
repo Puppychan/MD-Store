@@ -5,9 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    
+    <div
+      class="bg-black h-auto sm:h-screen flex py-24 sm:flex-row flex-col justify-center px-8"
+    >
+      <div
+        class="logo border border-white rounded-lg sm:border-r-0 sm:rounded-r-none border-b-none sm:rounded-l rounded-b-none"
+      >
+        <img
+          src="../images/logo.png"
+          class="w-full sm:h-full rounded-lg"
+          alt="logo"
+        />
+      </div>
+
+      <div
+        class="sm:w-full sm:max-w-md border border-white sm:border-l-0 rounded-lg sm:rounded-l-none border-t-none rounded-t-none rounded-b border-b-0 sm:rounded-r"
+      >
+        <form
+          class="py-3 sm:px-8 bg-white px-6 h-full rounded-b sm:rounded-b-none sm:rounded-r"
+        >
+        
+        <div class="title">
+            <h1 class="font-bold text-3xl py-1 inline-block sm:w-1/4 w-1/5 border-b-2 border-black">Login</h1>
+        </div>
+          <div class="username my-3">
+            <label for="email">Username: </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="my-3"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="password my-3">
+            <label for="password">Password: </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="my-3"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div class="login-btn mt-5 mb-3 pb-5 border-b border-gray-400">
+            <button
+              type="submit"
+              class="w-full bg-black text-white h-10 rounded-lg hover:opacity-60 duration-300"
+            >
+              Login
+            </button>
+          </div>
+
+          <div class="sign-up-btn mb-5">
+            <p>
+              Don't have an account yet?
+              <a
+                href="/"
+                class="underline decoration-2 hover:text-blue-500 hover:font-bold duration-200"
+                >Sign up</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
