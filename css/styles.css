@@ -842,10 +842,6 @@ select {
   width: 100%;
 }
 
-.w-1\/5 {
-  width: 20%;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -957,6 +953,10 @@ select {
   padding-bottom: 1.25rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -997,11 +997,6 @@ select {
   font-weight: 700;
 }
 
-.hover\:text-blue-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
 .hover\:opacity-60:hover {
   opacity: 0.6;
 }
@@ -1021,10 +1016,6 @@ select {
 
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:w-1\/4 {
-    width: 25%;
   }
 
   .sm\:max-w-md {
