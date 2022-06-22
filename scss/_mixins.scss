@@ -4,10 +4,46 @@
     gap: $gap;
     align-items: center;
 }
+@mixin flex-col($gap: 0) {
+    display: flex;
+    gap: $gap;
+    flex-direction: column;
+}
+@mixin flex-center($gap: 0) {
+    @include flex($gap);
+    justify-content: center;
+}
+// grid
+@mixin grid($row-gap: 0, $col-gap: 0) {
+    display: grid;
+    align-items: center;
+    gap: $row-gap $col-gap;
+}
 
 // responsive min
 @mixin media-min($min-width) {
     @media screen and (min-width: $min-width){
         @content;
+    }
+}
+
+// style
+@mixin style-button($clr-txt, $clr-bck, $clr-hover-txt: none, $clr-hover-bck: none) {
+    border: none;
+    color: $clr-txt;
+    background-color: $clr-bck;
+    &:hover {
+        color: $clr-hover-txt;
+        background-color: $clr-hover-bck;
+        cursor: pointer;
+    }
+}
+@mixin style-text($clr-txt, $clr-hover-txt: white, $padding: 0) {
+    text-decoration: none;
+    color: $clr-txt;
+    @include flex;
+    padding: $padding;
+    &:hover {
+        color: $clr-hover-txt;
     }
 }

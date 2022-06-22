@@ -1,11 +1,30 @@
 // color palettes
-$_blue: rgb(0,120,242);
-$_light-blue: rgb(234,244,254);
-$_light-gray: rgb(168,168,168);
+$__blue: rgb(0,120,242);
+$__light-blue: rgb(234,244,254);
+$__light-gray: rgb(168,168,168);
+$__dark-gray: rgb(42,42,42);
+$__default-hover-clr: white;
 
 // colors
+//header
+$clr-bck-header: $__dark-gray;
+$clr-bck-header-menuicon: $__blue;
+$clr-txt-header-menuicon: $__light-blue;
 // nav
-$clr-bck-nav: rgb(42,42,42);
-$clr-txt-nav: $_light-gray;
-$clr-bck-nav-button: $_blue;
-$clr-txt-nav-button: $_light-blue;
+$clr-bck-header-nav: $__dark-gray;
+$clr-txt-header-nav: $__light-gray;
+$clr-hover-txt-header-nav: $__default-hover-clr;
+$clr-border-header-nav: rgb(71, 71, 71);
+//login button
+$clr-txt-header-nav-login: $__light-gray;
+$clr-bck-header-nav-login: $__dark-gray;
+$clr-hover-txt-header-nav-login: $__default-hover-clr;
+// down button
+$clr-bck-header-nav-download: $__blue;
+$clr-txt-header-nav-download: $__light-blue;
+
+
+// height
+$header-height: 3.2em;
+// padding
+$header-nav-padding: 1em 1.8em;

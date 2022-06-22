@@ -1,4 +1,5 @@
 @use "mixins.scss" as mi;
+@use "variables.scss" as var;
 * {
     padding: 0;
     margin: 0;
@@ -6,24 +7,77 @@
 }
 .body {
     &-header {
-        height: 4em;
+        height: var.$header-height;
         width: 100%;
-        @include mi.flex(1em);
+        @include mi.flex;
+        justify-content: space-between;
+
+        background-color: var.$clr-bck-header;
+
         &-logo {
             height: 100%;
         }
-        &-nav {
-            flex-grow: 1;
-            display: flex;
-            &-element:last-of-type {
-                background-color: red;
+        &-menuicon {
+            height: 100%;
+            width: var.$header-height;
+            @include mi.flex-center;
+            background-color: var.$clr-bck-header-menuicon;
+            &-img {
+                fill: var.$clr-txt-header-menuicon;
             }
-            &-login {
-                height: 100%;
-                justify-self: flex-end;
+            &:hover {
+                cursor: pointer;
             }
         }
-        &-download {
+        &-nav {
+            // display: none;
+            position: absolute;
+            top: var.$header-height;
+            left: 5em;
+            right: 0;
+            bottom: 0;
+
+            @include mi.grid();
+            grid-template: 
+            "store" 0.8fr
+            "faq" 0.8fr
+            "help" 0.8fr
+            "about" 0.8fr
+            "." 5fr
+            "login" 1.1fr
+            "download" 1.1fr /
+            auto
+            ;
+
+
+
+            background-color: var.$clr-bck-header-nav;
+            &-element {
+                @include mi.style-text(var.$clr-txt-header-nav, var.$clr-hover-txt-header-nav, var.$header-nav-padding);
+                height: 100%;
+                border-bottom: 1px var.$clr-border-header-nav solid;
+            }
+            &-login {
+                grid-area: login;
+                @include mi.style-button(var.$clr-txt-header-nav-login, var.$clr-bck-header-nav-login, var.$clr-hover-txt-header-nav-login);
+
+                @include mi.flex-center(1em);
+                height: 100%;
+                box-shadow: 5px -7px 9px rgb(30, 29, 29);
+                &-icon {
+                    width: 3%;
+                    fill: var.$clr-txt-header-nav-login;
+                }
+                &:hover &-icon {
+                    fill: var.$clr-hover-txt-header-nav-login;
+                }
+            }
+            &-download {
+                @include mi.style-button(var.$clr-txt-header-nav-download, var.$clr-bck-header-nav-download);
+                grid-area: download;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
