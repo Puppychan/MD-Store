@@ -1,5 +1,18 @@
 @use "mixins.scss" as mi;
 @use "variables.scss" as var;
+@font-face {
+    font-family: 'Neutral Face';
+    src: url("../assets/font/NeutralFace/NeutralFace.otf");
+}
+@font-face {
+    font-family: 'Neutral Face';
+    font-weight: bold;
+    src: url("../assets/font/NeutralFace/NeutralFace-Bold.otf");
+}
+html {
+    font-family: 'Neutral Face', sans-serif;
+    letter-spacing: 0.7px;
+}
 * {
     padding: 0;
     margin: 0;
