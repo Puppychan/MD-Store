@@ -26,6 +26,19 @@
         @content;
     }
 }
+@mixin media-min-height($min-height) {
+
+}
+
+//position
+@mixin pos-absolute($top: auto, $bottom: auto, $left: auto, $right: auto, $z-index: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
 
 // style
 @mixin style-button($clr-txt, $clr-bck, $clr-hover-txt: none, $clr-hover-bck: none) {
@@ -40,7 +53,9 @@
 }
 @mixin style-text($clr-txt, $clr-hover-txt: white, $padding: 0) {
     text-decoration: none;
+    font-size: 0.8rem;
     color: $clr-txt;
+
     @include flex;
     padding: $padding;
     &:hover {

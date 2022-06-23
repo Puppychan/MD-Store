@@ -37,32 +37,39 @@ html {
             background-color: var.$clr-bck-header-menuicon;
             &-img {
                 fill: var.$clr-txt-header-menuicon;
+                overflow: visible;
+                &-first, &-second, &-third {
+                    transition: transform 400ms linear;
+                }
+                &:hover & {
+                    &-first {
+                        transform: rotate(30deg);
+                    }
+                    &-third {
+                        transform: rotate(-30deg);
+                        transform-origin: 3% 0%;
+                    }
+                }
             }
             &:hover {
                 cursor: pointer;
             }
         }
         &-nav {
-            // display: none;
-            position: absolute;
-            top: var.$header-height;
-            left: 5em;
-            right: 0;
-            bottom: 0;
-
+            @include mi.pos-absolute(var.$header-height, 0, 5em, 0);
+            
             @include mi.grid();
+            display: none;
             grid-template: 
-            "store" 0.8fr
-            "faq" 0.8fr
-            "help" 0.8fr
-            "about" 0.8fr
+            "store" minmax(50.59px, 0.8fr)
+            "faq" minmax(50.59px, 0.8fr)
+            "help" minmax(50.59px, 0.8fr)
+            "about" minmax(50.59px, 0.8fr)
             "." 5fr
-            "login" 1.1fr
-            "download" 1.1fr /
+            "login" minmax(51.3px, 1.1fr)
+            "download" minmax(51.3px, 1.1fr) /
             auto
             ;
-
-
 
             background-color: var.$clr-bck-header-nav;
             &-element {
@@ -73,10 +80,9 @@ html {
             &-login {
                 grid-area: login;
                 @include mi.style-button(var.$clr-txt-header-nav-login, var.$clr-bck-header-nav-login, var.$clr-hover-txt-header-nav-login);
-
                 @include mi.flex-center(1em);
                 height: 100%;
-                box-shadow: 5px -7px 9px rgb(30, 29, 29);
+                box-shadow: 5px -7px 9px rgb(36, 34, 34);
                 &-icon {
                     width: 3%;
                     fill: var.$clr-txt-header-nav-login;
@@ -90,6 +96,18 @@ html {
                 grid-area: download;
                 width: 100%;
                 height: 100%;
+            }
+        }
+        &.open {
+            &::after {
+                @include mi.pos-absolute(0, 0, 0, 0, -1);
+                content: "";
+
+            }
+            .body-header {
+              &-nav {
+                display: grid;
+              }  
             }
         }
     }
