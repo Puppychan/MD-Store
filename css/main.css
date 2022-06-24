@@ -43,15 +43,13 @@ html {
   fill: rgb(234, 244, 254);
   overflow: visible;
 }
-.body-header-menuicon-img-first, .body-header-menuicon-img-second, .body-header-menuicon-img-third {
-  transition: transform 400ms linear;
+.body-header-menuicon-img-first, .body-header-menuicon-img-forth {
+  transition: transform 100ms linear, opacity 130ms linear;
+  transform-origin: center;
 }
-.body-header-menuicon-img:hover .body-header-menuicon-img-first {
-  transform: rotate(30deg);
-}
-.body-header-menuicon-img:hover .body-header-menuicon-img-third {
-  transform: rotate(-30deg);
-  transform-origin: 3% 0%;
+.body-header-menuicon-img-second, .body-header-menuicon-img-third {
+  transition: transform 200ms linear;
+  transform-origin: center;
 }
 .body-header-menuicon:hover {
   cursor: pointer;
@@ -132,6 +130,20 @@ html {
 }
 .body-header.open .body-header-nav {
   display: grid;
+}
+.body-header.open .body-header-menuicon-first {
+  transform: translateY(28px);
+  opacity: 0;
+}
+.body-header.open .body-header-menuicon-second {
+  transform: rotate(45deg);
+}
+.body-header.open .body-header-menuicon-third {
+  transform: rotate(-45deg);
+}
+.body-header.open .body-header-menuicon-forth {
+  transform: translateY(-28px);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -38,17 +38,13 @@ html {
             &-img {
                 fill: var.$clr-txt-header-menuicon;
                 overflow: visible;
-                &-first, &-second, &-third {
-                    transition: transform 400ms linear;
+                &-first, &-forth {
+                    transition: transform 100ms linear, opacity 130ms linear;
+                    transform-origin: center;
                 }
-                &:hover & {
-                    &-first {
-                        transform: rotate(30deg);
-                    }
-                    &-third {
-                        transform: rotate(-30deg);
-                        transform-origin: 3% 0%;
-                    }
+                &-second, &-third {
+                    transition: transform 200ms linear;
+                    transform-origin: center;
                 }
             }
             &:hover {
@@ -108,6 +104,23 @@ html {
               &-nav {
                 display: grid;
               }  
+              &-menuicon {
+                    &-first {
+                        transform: translateY(28px);
+                        opacity: 0;
+                    }
+                    &-second {
+                        transform: rotate(45deg);
+                    }
+                    &-third {
+                        transform: rotate(-45deg);
+                        // bottom: 2em;
+                    }
+                    &-forth {
+                        transform: translateY(-28px);
+                        opacity: 0;
+                    }
+              }
             }
         }
     }
