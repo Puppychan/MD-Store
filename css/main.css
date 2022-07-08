@@ -1,149 +1,30 @@
-@font-face {
-  font-family: "Neutral Face";
-  src: url("../assets/font/NeutralFace/NeutralFace.otf");
+.body-main {
+  padding: 2em;
+  position: relative;
 }
-@font-face {
-  font-family: "Neutral Face";
-  font-weight: bold;
-  src: url("../assets/font/NeutralFace/NeutralFace-Bold.otf");
-}
-html {
-  font-family: "Neutral Face", sans-serif;
-  letter-spacing: 0.7px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.body-header {
-  height: 3.2em;
-  width: 100%;
+.body-main-nav {
   display: flex;
   gap: 0;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(42, 42, 42);
 }
-.body-header-logo {
-  height: 100%;
+.body-main-nav-search {
+  width: clamp(1.4em, 2.7%, 4em);
+  color: rgb(168, 168, 168);
 }
-.body-header-menuicon {
-  height: 100%;
-  width: 3.2em;
-  display: flex;
-  gap: 0;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 120, 242);
-}
-.body-header-menuicon-img {
-  fill: rgb(234, 244, 254);
-  overflow: visible;
-}
-.body-header-menuicon-img-first, .body-header-menuicon-img-forth {
-  transition: transform 100ms linear, opacity 130ms linear;
-  transform-origin: center;
-}
-.body-header-menuicon-img-second, .body-header-menuicon-img-third {
-  transition: transform 200ms linear;
-  transform-origin: center;
-}
-.body-header-menuicon:hover {
-  cursor: pointer;
-}
-.body-header-nav {
+.body-main-nav-menu {
   position: absolute;
-  top: 3.2em;
-  right: 0;
-  bottom: 0;
-  left: 5em;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: 50%;
   z-index: auto;
-  display: grid;
-  align-items: center;
-  gap: 0 0;
+  transform: translateX(-50%);
+  border: none;
+  outline: none;
+}
+.body-main-nav-menu option {
   display: none;
-  grid-template: "store" minmax(50.59px, 0.8fr) "faq" minmax(50.59px, 0.8fr) "help" minmax(50.59px, 0.8fr) "about" minmax(50.59px, 0.8fr) "." 5fr "login" minmax(51.3px, 1.1fr) "download" minmax(51.3px, 1.1fr)/auto;
-  background-color: rgb(42, 42, 42);
-}
-.body-header-nav-element {
-  text-decoration: none;
-  font-size: 0.8rem;
-  color: rgb(168, 168, 168);
-  display: flex;
-  gap: 0;
-  align-items: center;
-  padding: 1em 2.2em;
-  height: 100%;
-  border-bottom: 1px rgb(71, 71, 71) solid;
-}
-.body-header-nav-element:hover {
-  color: white;
-}
-.body-header-nav-login {
-  grid-area: login;
-  border: none;
-  color: rgb(168, 168, 168);
-  background-color: rgb(42, 42, 42);
-  display: flex;
-  gap: 1em;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  box-shadow: 5px -7px 9px rgb(36, 34, 34);
-}
-.body-header-nav-login:hover {
-  color: white;
-  background-color: none;
-  cursor: pointer;
-}
-.body-header-nav-login-icon {
-  width: 3%;
-  fill: rgb(168, 168, 168);
-}
-.body-header-nav-login:hover .body-header-nav-login-icon {
-  fill: white;
-}
-.body-header-nav-download {
-  border: none;
-  color: rgb(234, 244, 254);
-  background-color: rgb(0, 120, 242);
-  grid-area: download;
-  width: 100%;
-  height: 100%;
-}
-.body-header-nav-download:hover {
-  color: none;
-  background-color: none;
-  cursor: pointer;
-}
-.body-header.open::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  content: "";
-}
-.body-header.open .body-header-nav {
-  display: grid;
-}
-.body-header.open .body-header-menuicon-first {
-  transform: translateY(28px);
-  opacity: 0;
-}
-.body-header.open .body-header-menuicon-second {
-  transform: rotate(45deg);
-}
-.body-header.open .body-header-menuicon-third {
-  transform: rotate(-45deg);
-}
-.body-header.open .body-header-menuicon-forth {
-  transform: translateY(-28px);
-  opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
